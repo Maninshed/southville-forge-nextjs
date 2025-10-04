@@ -38,10 +38,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         className={`${roboto.variable} ${staatliche.variable} ${cormorant.variable} antialiased text-center`}
       >
         {children}
+        {/* Site-wide fixed bottom-right brand label */}
+        <div className="fixed bottom-4 right-6 z-[1000] pointer-events-none select-none" aria-hidden>
+          <span className="block font-extrabold uppercase tracking-wide text-[#863e11] opacity-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Southville Forge
+          </span>
+        </div>
       </body>
     </html>
   );

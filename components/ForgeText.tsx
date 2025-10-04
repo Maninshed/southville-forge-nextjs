@@ -14,20 +14,21 @@ export default function ForgeText() {
     let tween: gsap.core.Tween | null = null;
 
     if (textRef.current) {
-      tween = gsap.to(textRef.current, {
-        x: "-85vw",        // ✅ only a small shift left
-        y: "-150vh",       // ✅ sharp climb upward (off screen fast)
-        scale: 0.25,       // shrink more
-        opacity: 0,        // disappear fully
-        color: "#ff6600",  // furnace orange
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 120%",   // start as soon as text is low in view
-          end: "top 40%",     // ✅ complete sooner, while furnace is still visible
-          scrub: true,
-        },
-      });
+      // Animation temporarily disabled
+      // tween = gsap.to(textRef.current, {
+      //   x: "-85vw",        // small shift left
+      //   y: "-150vh",       // climb upward (off screen)
+      //   scale: 0.25,        // shrink
+      //   opacity: 0,         // fade out
+      //   color: "#ff6600",  // furnace orange
+      //   ease: "power2.inOut",
+      //   scrollTrigger: {
+      //     trigger: textRef.current,
+      //     start: "top 120%",
+      //     end: "top 40%",
+      //     scrub: true,
+      //   },
+      // });
     }
 
     // Flicker effect
@@ -45,10 +46,11 @@ export default function ForgeText() {
 
     return () => {
       clearInterval(interval);
-      if (tween) {
-        (tween as any)?.scrollTrigger?.kill();
-        tween.kill();
-      }
+      // Animation cleanup disabled while tween is commented out
+      // if (tween) {
+      //   (tween as any)?.scrollTrigger?.kill?.();
+      //   (tween as any)?.kill?.();
+      // }
     };
   }, []);
 

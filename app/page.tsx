@@ -1,8 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServiceSections from "../components/ServiceSections";
-import ServiceWebDesign from "../components/ServiceWebDesign";
-import ServiceBranding from "../components/ServiceBranding";
+import BackToTop from "../components/BackToTop";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -10,9 +9,8 @@ export default function Home() {
     <main className="bg-offwhite">
       <Header />
       <Hero />
+      <BackToTop />
       <ServiceSections />
-      <ServiceWebDesign />
-      <ServiceBranding />
       <Footer />
     </main>
   );
