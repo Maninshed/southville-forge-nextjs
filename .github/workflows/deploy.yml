@@ -1,0 +1,35 @@
+name: Deploy to Helsinki
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HELSINKI_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.HELSINKI_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Helsinki server
+        run: |
+          ssh -i ~/.ssh/id_rsa ${{ secrets.HELSINKI_USER }}@${{ secrets.HELSINKI_HOST }} << 'EOF'
+            cd /home/southville-forge/southville-forge-nextjs || exit 1
+            echo "Pulling latest changes..."
+            git pull origin main
+            echo "Rebuilding Docker stack..."
+            docker compose down
+            docker compose up -d --build
+            docker system prune -f
+            echo "✅ Deployment complete."
+          EOF
+
