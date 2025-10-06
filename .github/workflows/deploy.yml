@@ -10,26 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.HELSINKI_SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.HELSINKI_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Deploy to Helsinki server
-        run: |
-          ssh -i ~/.ssh/id_rsa ${{ secrets.HELSINKI_USER }}@${{ secrets.HELSINKI_HOST }} << 'EOF'
-            cd /home/southville-forge/southville-forge-nextjs || exit 1
-            echo "Pulling latest changes..."
+      - name: Deploy to Helsinki via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/southville-forge/southville-forge-nextjs
             git pull origin main
-            echo "Rebuilding Docker stack..."
             docker compose down
             docker compose up -d --build
-            docker system prune -f
-            echo "✅ Deployment complete."
-          EOF
-
+            echo "✅ Deploy completed on $(hostname)"
