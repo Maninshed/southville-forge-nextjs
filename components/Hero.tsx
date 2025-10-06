@@ -21,29 +21,27 @@ export default function Hero() {
         </video>
       </div>
 
-      
-
-      {/* Logo moved into CTA as background layer */}
+      {/* Logo above the banner with full visibility */}
 
       {/* Foreground content */}
       <div className="relative z-[96] mx-auto h-full max-w-7xl md:max-w-[1400px] px-6 flex flex-col justify-center">
+        {/* Visible logo above banner */}
+        <div className="mb-6 flex w-full justify-center">
+          <Image
+            src="/siteLogo2.webp"
+            alt="Southville Forge logo"
+            width={780}
+            height={270}
+            className="object-contain"
+            priority
+          />
+        </div>
         {/* Top hero banner with CTA toggle */}
         <div
           className="mb-10 block w-full rounded-md shadow-lg transition-colors duration-200 ease-out group relative z-[95]"
           style={{ backgroundColor: "#863e11", color: "#eadbc0" }}
         >
           <div className="relative overflow-hidden mx-auto max-w-[900px] px-6 py-10 text-center">
-            {/* Background logo layer */}
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center -z-0">
-              <Image
-                src="/siteLogo2.webp"
-                alt="Site logo"
-                fill
-                className="object-contain opacity-10"
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 900px"
-                priority
-              />
-            </div>
             <h2 className="relative z-10 text-4xl md:text-5xl font-extrabold uppercase tracking-wide" style={{ color: "#eadbc0" }}>
               Practical Design and Automation For Real Businesses.
             </h2>
