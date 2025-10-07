@@ -1,4 +1,12 @@
-version: "3.9"
+version: "3.8"
+
+networks:
+  forge-net:
+    external: true          # ✅ use existing network instead of recreating it
+
+volumes:
+  caddy_data:
+  caddy_config:
 
 services:
   web:
@@ -6,14 +14,28 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "80:3000"
     environment:
       - NODE_ENV=production
+      - PORT=3000
+    expose:
+      - "3000"
     restart: unless-stopped
+    networks:
+      - forge-net
 
-networks:
-  default:
-    driver: bridge
-
-
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /home/southville-forge/Caddyfile:/etc/caddy/Caddyfile:rw
+      - caddy_data:/data
+      - caddy_config:/config
+      - /var/log/caddy:/var/log/caddy
+    depends_on:
+      - web
+    networks:
+      - forge-net
