@@ -19,9 +19,17 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          script_stop: true
           script: |
+            set -e
             cd /home/southville-forge/southville-forge-nextjs
-            git pull origin main
-            docker compose down
+            echo "🔄 Fetching latest code from GitHub..."
+            git fetch origin main
+            git reset --hard origin/main
+            echo "🧹 Cleaning up Docker cache..."
+            docker compose down --remove-orphans
+            docker system prune -af
+            echo "⚙️ Rebuilding containers..."
             docker compose up -d --build
-            echo "✅ Deploy completed on $(hostname)"
+            echo "✅ Deploy completed successfully on $(hostname)"
+
