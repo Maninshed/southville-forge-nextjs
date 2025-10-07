@@ -101,10 +101,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        
-
-        {/* Forge animated text removed to avoid any runtime issues */}
       </div>
     </section>
   );

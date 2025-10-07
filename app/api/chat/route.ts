@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { streamText } from "ai";
 import { createOpenAI } from "@ai-sdk/openai";
+import { sendToN8n, type LeadPayload } from "../../../lib/n8nWebhook";
 
 // Expect OPENAI_API_KEY in .env.local (do not commit this file)
 const openai = createOpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -46,6 +47,65 @@ export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   const { messages } = await req.json();
+
+  // Build a freestyle transcript of the conversation
+  const freestyle: string = Array.isArray(messages)
+    ? messages
+        .map((m: any) =>
+          typeof m?.content === "string" ? `${m.role || "user"}: ${m.content}` : ""
+        )
+        .filter(Boolean)
+        .join("\n")
+    : "";
+
+  // Heuristic extraction: email and a simple consent detection
+  const emailMatch = freestyle.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+  const email = emailMatch?.[0] ?? "";
+
+  // crude consent detection: look for "consent" or "permission" near a user "yes"
+  const lowered = freestyle.toLowerCase();
+  const consent =
+    /\byes\b|\bi consent\b|\bi agree\b|\bok\b|\bcertainly\b/.test(lowered) &&
+    (lowered.includes("consent") || lowered.includes("permission") || lowered.includes("email you"));
+
+  // simple interest detection
+  let interest = "";
+  if (/(web|website)/i.test(freestyle)) interest = "web";
+  else if (/brand|branding/i.test(freestyle)) interest = "branding";
+  else if (/automation|ai/i.test(freestyle)) interest = "automation";
+
+  // domain extras (best-effort only)
+  const websiteMatch = freestyle.match(/https?:\/\/[\w.-]+\.[a-z]{2,}(?:\/[\S]*)?/i);
+  const website = websiteMatch?.[0] ?? "";
+
+  const payload: LeadPayload = {
+    timestamp: new Date().toISOString(),
+    name: "", // not reliably extractable from free text
+    business: "",
+    website,
+    interest,
+    painPoints: [],
+    email,
+    consent,
+    source: "chatbot",
+    ts: Date.now(),
+    freestyle,
+  };
+
+  // Fire-and-forget if we have at least an email and consent
+  if (payload.email && payload.consent) {
+    sendToN8n(payload);
+  } else {
+    // If session likely ended, send conversation anyway (consent stays false)
+    const lastUser = Array.isArray(messages)
+      ? [...messages].reverse().find((m: any) => m?.role === "user" && typeof m?.content === "string")
+      : undefined;
+    const endPhrases = ["bye", "thanks", "thank you", "that is all", "that's all", "speak later", "cheers"];
+    const isEnd = lastUser && endPhrases.some((p) => lastUser.content.toLowerCase().includes(p));
+    if (isEnd) {
+      sendToN8n(payload);
+    }
+  }
 
   const result = await streamText({
     model: openai("gpt-4o-mini"),

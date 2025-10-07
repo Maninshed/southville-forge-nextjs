@@ -4,20 +4,38 @@ export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   try {
-    const data = await req.json();
+    const payload = await req.json();
 
-    const res = await fetch("https://n8n.southvilleforge.com/webhook/lead", {
-      method: "POST",
+    // Debug logging locally
+    console.log("[lead-proxy] incoming payload:", payload);
+
+    const url = process.env.N8N_WEBHOOK_URL;
+    if (!url) {
+      console.error("[lead-proxy] Missing N8N_WEBHOOK_URL env var. Payload not forwarded.");
+    } else {
+      try {
+        // fire-and-forget; do not await
+        void fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }).catch((e) => console.error("[lead-proxy] fetch error:", e));
+      } catch (e) {
+        console.error("[lead-proxy] unexpected error queuing fetch:", e);
+      }
+    }
+
+    // Always return 200 OK to avoid breaking UX
+    return new Response(JSON.stringify({ status: "sent" }), {
+      status: 200,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
     });
-
-    const text = await res.text();
-    return new Response(text, { status: res.status });
   } catch (err: any) {
-    return new Response(
-      JSON.stringify({ error: true, message: err?.message ?? "Unknown error" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
+    console.error("[lead-proxy] handler error:", err?.message ?? err);
+    // Still respond 200 OK per requirement
+    return new Response(JSON.stringify({ status: "sent" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

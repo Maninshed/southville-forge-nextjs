@@ -1,16 +1,87 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useChat } from "ai/react";
 import type { Message } from "ai";
+import { extractQAPairs } from "../lib/extractQAPairs";
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({ api: "/api/chat" });
   const bottomRef = useRef<HTMLDivElement>(null);
+  const postedRef = useRef(false);
+
+  const freestyle = useMemo(() =>
+    Array.isArray(messages)
+      ? messages
+          .map((m: any) => (typeof m?.content === "string" ? `${m.role || "user"}: ${m.content}` : ""))
+          .filter(Boolean)
+          .join("\n")
+      : "",
+  [messages]);
+
+  // Simple heuristic detection for email + consent or end-of-session
+  const shouldSend = useMemo(() => {
+    const lowered = freestyle.toLowerCase();
+    const emailMatch = freestyle.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+    const hasEmail = !!emailMatch?.[0];
+    const consent =
+      /\byes\b|\bi consent\b|\bi agree\b|\bok\b|\bcertainly\b/.test(lowered) &&
+      (lowered.includes("consent") || lowered.includes("permission") || lowered.includes("email you"));
+    const lastUser = Array.isArray(messages)
+      ? [...messages].reverse().find((m: any) => m?.role === "user" && typeof m?.content === "string")
+      : undefined;
+    const endPhrases = ["bye", "thanks", "thank you", "that is all", "that's all", "speak later", "cheers"];
+    const isEnd = lastUser && endPhrases.some((p) => lastUser.content.toLowerCase().includes(p));
+    return (hasEmail && consent) || isEnd;
+  }, [freestyle, messages]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  // Fire-and-forget send to local proxy when condition met
+  useEffect(() => {
+    if (postedRef.current || !shouldSend) return;
+    postedRef.current = true;
+
+    // Extract minimal lead fields heuristically; leave blanks otherwise
+    const emailMatch = freestyle.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+    const email = emailMatch?.[0] ?? "";
+    const lowered = freestyle.toLowerCase();
+    const consent =
+      /\byes\b|\bi consent\b|\bi agree\b|\bok\b|\bcertainly\b/.test(lowered) &&
+      (lowered.includes("consent") || lowered.includes("permission") || lowered.includes("email you"));
+
+    let interest = "";
+    if (/(web|website)/i.test(freestyle)) interest = "web";
+    else if (/brand|branding/i.test(freestyle)) interest = "branding";
+    else if (/automation|ai/i.test(freestyle)) interest = "automation";
+
+    const websiteMatch = freestyle.match(/https?:\/\/[\w.-]+\.[a-z]{2,}(?:\/[\S]*)?/i);
+    const website = websiteMatch?.[0] ?? "";
+
+    const qa = extractQAPairs(messages as Message[]);
+    const payload = {
+      name: "",
+      business: "",
+      website,
+      interest,
+      painPoints: [] as string[],
+      email,
+      consent: !!consent,
+      source: "chatbot",
+      ts: Date.now(),
+      freestyle: JSON.stringify(qa, null, 2),
+    };
+
+    console.log("Lead payload:", payload);
+    // Fire-and-forget, no await
+    void fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+  }, [shouldSend, freestyle, messages]);
 
   return (
     <div className="mx-auto w-full max-w-3xl rounded-md border bg-[#122738] text-[#eadbc0] shadow-xl" style={{ borderColor: "#863e11" }}>

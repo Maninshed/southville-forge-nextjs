@@ -75,15 +75,7 @@ export default function ServiceSections() {
                   <h3 className="text-2xl font-extrabold mb-2" style={{ color: "#122738" }}>{card.title}</h3>
                   <p className="text-sm md:text-base mb-4" style={{ color: "#122738" }}>{card.blurb}</p>
 
-                  <MiniCTAToggle
-                    onForm={() => {
-                      const el = document.getElementById("quick-form");
-                      el?.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }}
-                    onChat={() => {
-                      window.dispatchEvent(new CustomEvent("open-chat"));
-                    }}
-                  />
+                  <MiniCTAToggle />
                 </motion.div>
               </div>
             );

@@ -17,15 +17,7 @@ export default function Footer() {
           <div>
             <h4 className="mb-3 text-lg font-bold" style={{ color: "#eadbc0" }}>Contact</h4>
             <div className="max-w-xs">
-              <MiniCTAToggle
-                onForm={() => {
-                  const el = document.getElementById("quick-form");
-                  el?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                onChat={() => {
-                  window.dispatchEvent(new CustomEvent("open-chat"));
-                }}
-              />
+              <MiniCTAToggle />
             </div>
             <p className="mt-4 text-sm" style={{ color: "#eadbc0" }}>Made In Bristol</p>
           </div>
