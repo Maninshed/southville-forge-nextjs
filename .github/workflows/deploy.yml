@@ -22,14 +22,20 @@ jobs:
           script_stop: true
           script: |
             set -e
+            echo "🔄 Switching to project directory..."
             cd /home/southville-forge/southville-forge-nextjs
-            echo "🔄 Fetching latest code from GitHub..."
+
+            echo "📥 Fetching latest changes..."
             git fetch origin main
             git reset --hard origin/main
-            echo "🧹 Cleaning up Docker cache..."
+
+            echo "🧹 Cleaning up Docker cache and old containers..."
             docker compose down --remove-orphans
             docker system prune -af
-            echo "⚙️ Rebuilding containers..."
-            docker compose up -d --build
+
+            echo "⚙️ Rebuilding 'web' service from scratch..."
+            docker compose build --no-cache web
+            docker compose up -d web
+
             echo "✅ Deploy completed successfully on $(hostname)"
 
