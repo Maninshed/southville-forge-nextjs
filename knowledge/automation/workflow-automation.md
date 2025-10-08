@@ -1,12 +1,22 @@
+
 ---
 title: "Workflow Automation"
-tone: practical
+tone: professional
+purpose: process description
 ---
-Workflow automation means designing clear steps between “someone asks” and “something happens.”  
-We map each step, decide what needs human input, and automate the rest using tools like n8n and Zapier.
 
-Examples:
-- New enquiry → tagged in CRM → Slack notification.
-- Completed form → generate PDF proposal → email client.
+# Workflow Automation
 
-No black boxes, no dependencies you can’t see — you keep control.
+Most businesses already use a mix of online forms, spreadsheets, and emails.  
+Workflow automation connects these tools so information moves automatically instead of by hand.
+
+### Example Process
+1. A client fills in a form on your website.  
+2. The system checks the submission, formats the data, and sends a copy to your email or CRM.  
+3. It creates a new contact, schedules a follow-up, and can even generate a quote automatically.  
+4. If the client replies, the workflow updates the record and sends a notification to your phone.
+
+We use **n8n**, **Baserow**, and **OpenAI APIs** to make these systems work together.  
+Everything runs on open, maintainable platforms — no hidden subscriptions or lock-ins.
+
+---

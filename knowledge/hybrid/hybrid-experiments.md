@@ -1,7 +1,19 @@
+
 ---
 title: "Hybrid Experiments"
-tone: hybrid
+tone: visionary
+purpose: showcase
 ---
-We prototype small, useful tools — internal dashboards, chat interfaces, generative visuals — to test new workflows.
 
-Everything we learn feeds back into client systems so nothing is wasted.
+# Hybrid Experiments
+
+We run ongoing experiments combining design, automation, and AI.
+
+Examples include:
+- Interactive product demos powered by local AI models  
+- Visual interfaces for summarising or sorting data  
+- Automated content builders for small e-commerce sites
+
+The aim is to test ideas quickly, learn from them, and share working examples.
+
+---

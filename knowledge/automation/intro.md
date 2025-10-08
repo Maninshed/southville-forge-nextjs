@@ -1,13 +1,21 @@
+
 ---
-title: "AI & Automation Overview"
+title: "AI & Automation Systems"
 tone: practical
+purpose: intro
 ---
-**What we do**
 
-We design automation systems that handle the repetitive parts of business operations — the admin, the follow-ups, the quote reminders, the status updates — so people can focus on the work that matters.
+# AI & Automation Systems
 
-Our approach is simple: understand what slows you down, then build a lightweight workflow that connects your existing tools and makes them work together automatically.
+Automation isn’t a luxury or an experiment. It’s how small businesses stay focused and competitive.  
+We build simple systems that cut down repetitive tasks and free up time for the work that earns money.
 
-**Who it’s for**
+Our approach is direct:
+- Understand the real bottlenecks
+- Build automations that fit your tools and habits
+- Keep it maintainable, fast, and transparent
 
-Small teams, service providers, and anyone who’s outgrowing spreadsheets but doesn’t need enterprise software. If you send the same message twice, you can probably automate it.
+Whether it’s following up on quotes, answering basic enquiries, or syncing data between systems,  
+the goal is always the same: reduce noise, keep things moving, and make your day easier.
+
+---

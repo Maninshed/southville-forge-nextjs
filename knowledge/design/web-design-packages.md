@@ -1,11 +1,26 @@
+
 ---
 title: "Web Design Packages"
-tone: professional
+tone: practical
+purpose: service overview
 ---
-We offer three web-design tiers:
 
-- **Starter** — one-page site or landing page with CMS setup.  
-- **Standard** — full multi-page site with form integration and analytics.  
-- **Custom** — tailored design systems with animations or dynamic content.
+# Web Design Packages
 
-All sites are responsive, SEO-ready, and built to evolve.
+We offer modular packages that scale with your business needs.
+
+## One-Page Launch
+A fast, clear landing page for startups, trades, or local services.  
+Includes contact form, quote capture, and optional chatbot.
+
+## Site Refresh
+For businesses that already have a site but want better layout, clearer content, and faster load times.
+
+## Full Redesign
+Complete rebuilds with new structure, copy, and design language.  
+Includes integration with automation tools or CRMs if required.
+
+Every build is responsive, lightweight, and easy to maintain.  
+We keep you in control of your own site.
+
+---

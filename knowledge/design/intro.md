@@ -1,9 +1,23 @@
----
-title: "Design & Branding Overview"
-tone: professional
----
-Design isn’t decoration — it’s communication.  
-We build clear, consistent visuals that match what your business stands for.
 
-Our design work covers logos, identity systems, web layout, and visual tone.  
-Each project is grounded in purpose and easy to maintain once live.
+---
+title: "Design & Branding"
+tone: professional
+purpose: intro
+---
+
+# Design & Branding
+
+Good design makes information clear and memorable.  
+We design websites, brand systems, and materials that support the way you already work.
+
+The focus is usability, speed, and visual integrity — not trends or jargon.
+
+Our design process covers:
+- Brand identity and typography
+- Responsive web layouts built in Next.js or WordPress
+- Image and asset systems that stay consistent across platforms
+- Copywriting that sounds like you
+
+Design should simplify communication, not add noise.
+
+---

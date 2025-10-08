@@ -1,12 +1,21 @@
+
 ---
 title: "Design Automation"
 tone: hybrid
+purpose: integration
 ---
-Design automation links creative tools to data.
 
-Examples:
-- Auto-generate proposals or pitch decks from client data.  
-- Batch-produce social images using templates.  
-- Sync web styles with design systems.
+# Design Automation
 
-It keeps branding consistent and removes repetitive design work.
+Automation and design work well together.  
+We build tools that generate visual drafts, reports, or proposals directly from your data.
+
+### Examples
+- Auto-generated moodboards from form submissions  
+- Visual summaries of client input  
+- Automated design briefs for internal review  
+
+These tools save hours of admin and help you start creative work faster.  
+They also make your process transparent and repeatable.
+
+---

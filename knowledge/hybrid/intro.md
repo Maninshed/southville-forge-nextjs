@@ -1,8 +1,16 @@
----
-title: "Creative Technology Overview"
-tone: hybrid
----
-Hybrid work merges design, data, and automation.  
-We use emerging tools to create interactive sites, AI-driven visuals, and digital experiences that adapt to context.
 
-The goal is always practical: technology that earns its keep.
+---
+title: "Creative Tech & Hybrid Solutions"
+tone: visionary
+purpose: intro
+---
+
+# Creative Tech & Hybrid Solutions
+
+Some ideas sit between design and technology.  
+We explore those areas to find new ways of working, learning, and presenting information.
+
+Our hybrid projects test practical applications of AI in creative and business environments.  
+They’re small, useful prototypes that often grow into full systems later.
+
+---

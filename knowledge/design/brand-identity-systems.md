@@ -1,8 +1,21 @@
+
 ---
 title: "Brand Identity Systems"
 tone: professional
+purpose: visual language
 ---
-Your visual identity defines how people remember you.  
-We develop flexible identity systems — logo, palette, typography, and brand assets — that work everywhere from signage to social.
 
-Deliverables are supplied as reusable digital kits so updates are simple.
+# Brand Identity Systems
+
+A clear identity makes your business easier to remember and trust.  
+We create brand kits that define how your name, logo, colours, and tone are used.
+
+Each system includes:
+- Logo formats and usage rules  
+- Font pairings  
+- Colour palette with accessibility contrast checks  
+- Basic social and web templates
+
+The goal is a consistent presence across print, digital, and social channels without locking you into a single style.
+
+---
