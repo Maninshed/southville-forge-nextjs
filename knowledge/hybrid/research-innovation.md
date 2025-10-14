@@ -1,21 +1,17 @@
-
 ---
-title: "Research and Innovation"
+title: "Research & Innovation"
 tone: visionary
 purpose: r&d
 ---
 
-# Research and Innovation
+# Research & Innovation
 
-Innovation doesn’t need to be abstract.  
-We treat research as continuous development — small improvements that add up.
+Innovation means staying curious.  
+We treat R&D as small, continuous steps — testing efficiency, ethics, and sustainability in every build.
 
-Topics we explore:
-- Local and private AI deployments  
-- Human-in-the-loop workflows  
-- Lightweight interfaces for non-technical users  
-- Energy-efficient compute setups
+Focus areas:
+- Local/private AI deployments  
+- Human-in-the-loop systems  
+- Low-energy compute setups  
 
-These projects feed directly back into client work, improving stability and usability across everything we build.
-
----
+The result: practical innovation that improves reliability and reduces waste.

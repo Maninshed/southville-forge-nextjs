@@ -1,4 +1,3 @@
-
 ---
 title: "Design & Branding"
 tone: professional
@@ -7,17 +6,13 @@ purpose: intro
 
 # Design & Branding
 
-Good design makes information clear and memorable.  
-We design websites, brand systems, and materials that support the way you already work.
+Clear design communicates trust.  
+We build brand systems and websites that stay consistent across every channel — from your logo to your invoices.
 
-The focus is usability, speed, and visual integrity — not trends or jargon.
+### What We Do
+- Build design systems that scale  
+- Keep visual language consistent  
+- Align tone of voice with brand goals  
 
-Our design process covers:
-- Brand identity and typography
-- Responsive web layouts built in Next.js or WordPress
-- Image and asset systems that stay consistent across platforms
-- Copywriting that sounds like you
-
-Design should simplify communication, not add noise.
-
----
+Our approach: minimal, usable, and authentic.  
+Design shouldn’t overwhelm — it should make sense instantly.

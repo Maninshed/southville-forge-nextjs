@@ -1,21 +1,18 @@
-
 ---
-title: "AI Tools and Microservices"
+title: "AI Tools & Microservices"
 tone: professional
 purpose: internal tools
 ---
 
-# AI Tools and Microservices
+# AI Tools & Microservices
 
-We maintain a small library of open-source microservices for clients and partners.  
-They connect everyday tools like Gmail, Sheets, and CMS platforms with AI features.
+We maintain small, open-source tools for automation, design, and communication.
 
-Examples:
-- Email summariser and auto-tagger  
-- Content classifier and keyword extractor  
-- Visual brief generator from structured inputs  
-- Lead scoring and qualification service  
+### Example Tools
+- Email summariser + auto-tagger  
+- Content classifier  
+- Lead scoring engine  
+- Image caption generator  
 
-Each service can run locally or in the cloud and integrates with ForgeAgent or n8n.
-
----
+All tools can run locally or connect to ForgeAgent.  
+They’re built to integrate smoothly with your existing stack.

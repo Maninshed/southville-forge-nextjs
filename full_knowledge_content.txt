@@ -1,0 +1,427 @@
+
+---
+
+## `/knowledge/automation/intro.md`
+
+```markdown
+---
+title: "AI & Automation Systems"
+tone: practical
+purpose: intro
+---
+
+# AI & Automation Systems
+
+Automation isn’t a luxury or an experiment. It’s how small businesses stay focused and competitive.  
+We build simple systems that cut down repetitive tasks and free up time for the work that earns money.
+
+Our approach is direct:
+- Understand the real bottlenecks
+- Build automations that fit your tools and habits
+- Keep it maintainable, fast, and transparent
+
+Whether it’s following up on quotes, answering basic enquiries, or syncing data between systems,  
+the goal is always the same: reduce noise, keep things moving, and make your day easier.
+```
+
+---
+
+## `/knowledge/automation/core-services.md`
+
+```markdown
+---
+title: "Core Automation Services"
+tone: practical
+purpose: service list
+---
+
+# Core Automation Services
+
+We focus on systems that solve everyday business problems without overcomplicating them.
+
+## Chatbots and Virtual Assistants
+For trades, e-commerce, and service businesses that get the same questions every day.  
+Bots that reply instantly, capture contact details, and send qualified enquiries straight to your inbox or CRM.
+
+## Quote and Lead Follow-Ups
+Workflows that automatically message potential clients after a quote, check in a few days later, and log responses.  
+No spam, no pressure — just smart reminders that bring back lost business.
+
+## Email and Message Automation
+Templates and triggers that handle confirmations, updates, and thank-yous automatically.  
+Everything stays consistent, accurate, and on-brand.
+
+## CRM and Database Sync
+Automate data entry and updates between your contact forms, email tools, and spreadsheets.  
+Save hours of admin time and cut down on errors.
+
+## Dashboard and Reporting
+See what’s happening in your business without trawling through files.  
+Daily updated metrics, quote counts, conversions, and client activity in one place.
+```
+
+---
+
+## `/knowledge/automation/workflow-automation.md`
+
+```markdown
+---
+title: "Workflow Automation"
+tone: professional
+purpose: process description
+---
+
+# Workflow Automation
+
+Most businesses already use a mix of online forms, spreadsheets, and emails.  
+Workflow automation connects these tools so information moves automatically instead of by hand.
+
+### Example Process
+1. A client fills in a form on your website.  
+2. The system checks the submission, formats the data, and sends a copy to your email or CRM.  
+3. It creates a new contact, schedules a follow-up, and can even generate a quote automatically.  
+4. If the client replies, the workflow updates the record and sends a notification to your phone.
+
+We use **n8n**, **Baserow**, and **OpenAI APIs** to make these systems work together.  
+Everything runs on open, maintainable platforms — no hidden subscriptions or lock-ins.
+```
+
+---
+
+## `/knowledge/automation/forgeagent-overview.md`
+
+```markdown
+---
+title: "ForgeAgent Overview"
+tone: professional
+purpose: system description
+---
+
+# ForgeAgent
+
+ForgeAgent is the AI layer that connects your website, forms, and automation workflows.
+
+It can:
+- Understand natural language from visitors and clients  
+- Capture structured data from conversations  
+- Pass that data directly to automation tools like n8n  
+- Generate responses or summaries based on your stored knowledge
+
+On your website, it powers chat interfaces and consultation tools.  
+Internally, it helps generate briefs, quotes, and proposals automatically.  
+ForgeAgent doesn’t replace you — it reduces the steps between a question and an action.
+```
+
+---
+
+## `/knowledge/automation/agentic-workflows.md`
+
+```markdown
+---
+title: "Agentic Workflows"
+tone: professional
+purpose: advanced automation
+---
+
+# Agentic Workflows
+
+Agentic workflows let AI systems coordinate multiple tasks instead of performing just one.  
+They can interpret intent, plan actions, and trigger the right workflow automatically.
+
+### Example
+A client says: “I need a new website and want to link it with my booking system.”
+
+ForgeAgent breaks that into tasks:
+1. Identify project type and urgency.  
+2. Create a new client record.  
+3. Trigger a design questionnaire workflow.  
+4. Send the first follow-up email with project info.  
+5. Generate a draft summary for review.
+
+These workflows combine **OpenAI or Ollama models**, **Weaviate vector search**, and **n8n orchestration**.  
+They stay simple to monitor but intelligent enough to make decisions when needed.
+```
+
+---
+
+## `/knowledge/design/intro.md`
+
+```markdown
+---
+title: "Design & Branding"
+tone: professional
+purpose: intro
+---
+
+# Design & Branding
+
+Good design makes information clear and memorable.  
+We design websites, brand systems, and materials that support the way you already work.
+
+The focus is usability, speed, and visual integrity — not trends or jargon.
+
+Our design process covers:
+- Brand identity and typography
+- Responsive web layouts built in Next.js or WordPress
+- Image and asset systems that stay consistent across platforms
+- Copywriting that sounds like you
+
+Design should simplify communication, not add noise.
+```
+
+---
+
+## `/knowledge/design/web-design-packages.md`
+
+```markdown
+---
+title: "Web Design Packages"
+tone: practical
+purpose: service overview
+---
+
+# Web Design Packages
+
+We offer modular packages that scale with your business needs.
+
+## One-Page Launch
+A fast, clear landing page for startups, trades, or local services.  
+Includes contact form, quote capture, and optional chatbot.
+
+## Site Refresh
+For businesses that already have a site but want better layout, clearer content, and faster load times.
+
+## Full Redesign
+Complete rebuilds with new structure, copy, and design language.  
+Includes integration with automation tools or CRMs if required.
+
+Every build is responsive, lightweight, and easy to maintain.  
+We keep you in control of your own site.
+```
+
+---
+
+## `/knowledge/design/brand-identity-systems.md`
+
+```markdown
+---
+title: "Brand Identity Systems"
+tone: professional
+purpose: visual language
+---
+
+# Brand Identity Systems
+
+A clear identity makes your business easier to remember and trust.  
+We create brand kits that define how your name, logo, colours, and tone are used.
+
+Each system includes:
+- Logo formats and usage rules  
+- Font pairings  
+- Colour palette with accessibility contrast checks  
+- Basic social and web templates
+
+The goal is a consistent presence across print, digital, and social channels without locking you into a single style.
+```
+
+---
+
+## `/knowledge/design/design-automation.md`
+
+```markdown
+---
+title: "Design Automation"
+tone: hybrid
+purpose: integration
+---
+
+# Design Automation
+
+Automation and design work well together.  
+We build tools that generate visual drafts, reports, or proposals directly from your data.
+
+### Examples
+- Auto-generated moodboards from form submissions  
+- Visual summaries of client input  
+- Automated design briefs for internal review  
+
+These tools save hours of admin and help you start creative work faster.  
+They also make your process transparent and repeatable.
+```
+
+---
+
+## `/knowledge/hybrid/intro.md`
+
+```markdown
+---
+title: "Creative Tech & Hybrid Solutions"
+tone: visionary
+purpose: intro
+---
+
+# Creative Tech & Hybrid Solutions
+
+Some ideas sit between design and technology.  
+We explore those areas to find new ways of working, learning, and presenting information.
+
+Our hybrid projects test practical applications of AI in creative and business environments.  
+They’re small, useful prototypes that often grow into full systems later.
+```
+
+---
+
+## `/knowledge/hybrid/hybrid-experiments.md`
+
+```markdown
+---
+title: "Hybrid Experiments"
+tone: visionary
+purpose: showcase
+---
+
+# Hybrid Experiments
+
+We run ongoing experiments combining design, automation, and AI.
+
+Examples include:
+- Interactive product demos powered by local AI models  
+- Visual interfaces for summarising or sorting data  
+- Automated content builders for small e-commerce sites
+
+The aim is to test ideas quickly, learn from them, and share working examples.
+```
+
+---
+
+## `/knowledge/hybrid/ai-tools-microservices.md`
+
+```markdown
+---
+title: "AI Tools and Microservices"
+tone: professional
+purpose: internal tools
+---
+
+# AI Tools and Microservices
+
+We maintain a small library of open-source microservices for clients and partners.  
+They connect everyday tools like Gmail, Sheets, and CMS platforms with AI features.
+
+Examples:
+- Email summariser and auto-tagger  
+- Content classifier and keyword extractor  
+- Visual brief generator from structured inputs  
+- Lead scoring and qualification service  
+
+Each service can run locally or in the cloud and integrates with ForgeAgent or n8n.
+```
+
+---
+
+## `/knowledge/hybrid/research-innovation.md`
+
+```markdown
+---
+title: "Research and Innovation"
+tone: visionary
+purpose: r&d
+---
+
+# Research and Innovation
+
+Innovation doesn’t need to be abstract.  
+We treat research as continuous development — small improvements that add up.
+
+Topics we explore:
+- Local and private AI deployments  
+- Human-in-the-loop workflows  
+- Lightweight interfaces for non-technical users  
+- Energy-efficient compute setups
+
+These projects feed directly back into client work, improving stability and usability across everything we build.
+```
+
+---
+
+## `/knowledge/global/forge-manifesto.md`
+
+```markdown
+---
+title: "The Forge Manifesto"
+tone: hybrid
+purpose: ethos
+---
+
+# The Forge Manifesto
+
+Southville Forge builds useful systems.  
+We combine design thinking with technical delivery to make tools that people actually use.
+
+We believe in:
+- Transparency over mystery  
+- Open standards over lock-ins  
+- Simplicity over performance for its own sake  
+- Clear communication at every stage
+
+Our clients range from single-person setups to growing teams, but the aim is always the same:  
+reduce friction, improve flow, and make technology feel straightforward.
+```
+
+---
+
+## `/knowledge/global/contact-and-onboarding.md`
+
+```markdown
+---
+title: "Start Here"
+tone: practical
+purpose: onboarding
+---
+
+# Start Here
+
+If you’re ready to start, the process is simple.
+
+1. Tell us what you need — a new site, automation, or both.  
+2. We’ll look at your setup and suggest the quickest path forward.  
+3. You decide what to move ahead with — no pressure, no jargon.
+
+We’ll handle setup, testing, and hand-off.  
+You stay in control of your own tools and data.
+```
+
+---
+
+## `/knowledge/global/case-studies-summary.md`
+
+```markdown
+---
+title: "Case Studies"
+tone: professional
+purpose: credibility
+---
+
+# Case Studies
+
+Here are a few examples of what this approach looks like in practice.
+
+## Quote Follow-Up System
+A trades company that used to chase leads manually.  
+We automated reminders and logged responses in Google Sheets.  
+Result: 30% increase in accepted jobs, zero extra admin.
+
+## Website + CRM Integration
+A local cleaning company whose form data was getting lost in emails.  
+We linked their site forms directly to a shared CRM.  
+Result: faster response times and no lost enquiries.
+
+## Design Audit and Refresh
+An online retailer with an outdated site and scattered branding.  
+We rebuilt layout and tone, and linked customer data to follow-up workflows.  
+Result: faster load times, more repeat business, clearer brand presence.
+```
+
+---
+
+

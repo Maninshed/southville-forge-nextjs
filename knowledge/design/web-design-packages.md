@@ -1,4 +1,3 @@
-
 ---
 title: "Web Design Packages"
 tone: practical
@@ -7,20 +6,17 @@ purpose: service overview
 
 # Web Design Packages
 
-We offer modular packages that scale with your business needs.
+We offer flexible, modular packages that fit any stage of business growth.
 
 ## One-Page Launch
-A fast, clear landing page for startups, trades, or local services.  
-Includes contact form, quote capture, and optional chatbot.
+A simple, fast website — ideal for new ventures or trades.  
+Includes contact form, quote capture, and ForgeBot integration.
 
 ## Site Refresh
-For businesses that already have a site but want better layout, clearer content, and faster load times.
+Keep your existing site but update layout, copy, and SEO.  
+We improve structure and speed without reinventing everything.
 
 ## Full Redesign
-Complete rebuilds with new structure, copy, and design language.  
-Includes integration with automation tools or CRMs if required.
+Comprehensive rebuild with visual identity, new UX, and connected automations (CRM, booking, etc.).
 
-Every build is responsive, lightweight, and easy to maintain.  
-We keep you in control of your own site.
-
----
+Every build is **responsive**, **lightweight**, and **editable** — you control your own site.

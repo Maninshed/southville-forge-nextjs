@@ -1,4 +1,3 @@
-
 ---
 title: "Core Automation Services"
 tone: practical
@@ -7,26 +6,30 @@ purpose: service list
 
 # Core Automation Services
 
-We focus on systems that solve everyday business problems without overcomplicating them.
+We focus on processes that solve real business problems.  
+Each service saves time, prevents human error, and improves consistency.
 
-## Chatbots and Virtual Assistants
-For trades, e-commerce, and service businesses that get the same questions every day.  
-Bots that reply instantly, capture contact details, and send qualified enquiries straight to your inbox or CRM.
+## Chatbots & Virtual Assistants
+Instant replies for routine questions.  
+Bots that greet, collect info, and hand over leads automatically — ideal for trades, e-commerce, or booking-based businesses.  
+**Example:** A builder’s chatbot answers “do you cover my area?” or “when can you start?” instantly, collects a postcode, and schedules a callback.
 
-## Quote and Lead Follow-Ups
-Workflows that automatically message potential clients after a quote, check in a few days later, and log responses.  
-No spam, no pressure — just smart reminders that bring back lost business.
+## Quote & Lead Follow-Ups
+Automate quote reminders and client check-ins.  
+Smart workflows track open quotes, send follow-ups at the right time, and log replies to a CRM.  
+**Result:** fewer lost jobs, better conversion, zero admin.
 
-## Email and Message Automation
-Templates and triggers that handle confirmations, updates, and thank-yous automatically.  
-Everything stays consistent, accurate, and on-brand.
+## Email & Message Automation
+Send confirmations, thank-yous, and updates automatically.  
+Everything stays branded and consistent — no more copy-paste errors.
 
-## CRM and Database Sync
-Automate data entry and updates between your contact forms, email tools, and spreadsheets.  
-Save hours of admin time and cut down on errors.
+## CRM & Database Sync
+Sync forms, messages, and contacts across your systems automatically.  
+**Example:** Web form → Google Sheets → CRM → notification to your phone. Done.
 
-## Dashboard and Reporting
-See what’s happening in your business without trawling through files.  
-Daily updated metrics, quote counts, conversions, and client activity in one place.
+## Dashboards & Reports
+Real-time overviews of your pipeline, leads, and response times — no spreadsheets, no hunting.  
+See what’s working and where to focus next.
 
----
+Want to see how this could fit your setup?  
+**Ask ForgeBot** — it’ll guide you through options for your business.

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto, Staatliches, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { ChatProvider } from "../components/ChatProvider";
+import SiteNav from "../components/SiteNav";
 
 // Body text font
 const roboto = Roboto({
@@ -49,7 +51,10 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${staatliche.variable} ${cormorant.variable} antialiased text-center`}
       >
-        {children}
+        <ChatProvider>
+          <SiteNav />
+          {children}
+        </ChatProvider>
       </body>
     </html>
   );

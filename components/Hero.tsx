@@ -69,20 +69,20 @@ export default function Hero() {
           {/* Center buttons */}
           <div className="flex h-full flex-col justify-between gap-6 md:order-2">
             <a
-              href="#ai-and-automation"
-              className="block rounded-md bg-[#863e11] px-16 py-12 text-center text-4xl font-extrabold uppercase tracking-wide text-[#eadbc0] shadow-lg transition-colors duration-200 ease-out will-change-transform transform-gpu hover:bg-[#73340f] hover:-translate-y-0.5 hover:scale-[1.02]"
+              href="/ai-automation"
+              className="block rounded-md bg-[#863e11] px-16 py-12 text-center text-4xl font-extrabold uppercase tracking-wide text-[#eadbc0] visited:text-[#eadbc0] shadow-lg transition-colors duration-200 ease-out will-change-transform transform-gpu hover:bg-[#73340f] hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               AI & Automation Systems
             </a>
             <a
-              href="#design-and-branding"
-              className="block rounded-md bg-[#863e11] px-16 py-12 text-center text-4xl font-extrabold uppercase tracking-wide text-[#eadbc0] shadow-lg transition-colors duration-200 ease-out will-change-transform transform-gpu hover:bg-[#73340f] hover:-translate-y-0.5 hover:scale-[1.02]"
+              href="/design-branding"
+              className="block rounded-md bg-[#863e11] px-16 py-12 text-center text-4xl font-extrabold uppercase tracking-wide text-[#eadbc0] visited:text-[#eadbc0] shadow-lg transition-colors duration-200 ease-out will-change-transform transform-gpu hover:bg-[#73340f] hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Design & Branding
             </a>
             <a
-              href="#creative-tech-and-hybrid"
-              className="block rounded-md bg-[#863e11] px-16 py-12 text-center text-4xl font-extrabold uppercase tracking-wide text-[#eadbc0] shadow-lg transition-colors duration-200 ease-out will-change-transform transform-gpu hover:bg-[#73340f] hover:-translate-y-0.5 hover:scale-[1.02]"
+              href="/creative-tech"
+              className="block rounded-md bg-[#863e11] px-16 py-12 text-center text-4xl font-extrabold uppercase tracking-wide text-[#eadbc0] visited:text-[#eadbc0] shadow-lg transition-colors duration-200 ease-out will-change-transform transform-gpu hover:bg-[#73340f] hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Creative Tech & Hybrid Solutions
             </a>

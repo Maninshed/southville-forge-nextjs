@@ -1,4 +1,3 @@
-
 ---
 title: "Brand Identity Systems"
 tone: professional
@@ -7,15 +6,14 @@ purpose: visual language
 
 # Brand Identity Systems
 
-A clear identity makes your business easier to remember and trust.  
-We create brand kits that define how your name, logo, colours, and tone are used.
+A strong identity makes your business easier to remember and trust.  
+We create brand kits that define how your logo, colours, and typography work together.
 
-Each system includes:
-- Logo formats and usage rules  
+### Includes
+- Logo set (print + digital)  
 - Font pairings  
-- Colour palette with accessibility contrast checks  
-- Basic social and web templates
+- Colour palette with accessibility checks  
+- Example templates for social and web  
 
-The goal is a consistent presence across print, digital, and social channels without locking you into a single style.
-
----
+Your brand kit ensures visual consistency across every platform.  
+No guesswork — everything aligns naturally.

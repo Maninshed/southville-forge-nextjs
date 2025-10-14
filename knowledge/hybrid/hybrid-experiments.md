@@ -1,4 +1,3 @@
-
 ---
 title: "Hybrid Experiments"
 tone: visionary
@@ -7,13 +6,11 @@ purpose: showcase
 
 # Hybrid Experiments
 
-We run ongoing experiments combining design, automation, and AI.
+We run experiments that mix design, AI, and automation to find new approaches.
 
-Examples include:
-- Interactive product demos powered by local AI models  
-- Visual interfaces for summarising or sorting data  
-- Automated content builders for small e-commerce sites
+### Examples
+- Visual dashboards powered by local AI models  
+- Tools that summarise information interactively  
+- Generators that build content layouts automatically  
 
-The aim is to test ideas quickly, learn from them, and share working examples.
-
----
+Each prototype feeds back into our commercial work — small ideas that become production tools.
